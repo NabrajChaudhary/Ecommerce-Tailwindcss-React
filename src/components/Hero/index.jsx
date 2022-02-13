@@ -1,8 +1,8 @@
 import React from 'react'
 import { Navigation, Pagination,Autoplay, Scrollbar, A11y } from 'swiper';
-
+import Data from '../../Data/data.js'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SliderImg from '../../Img/Layer 5.png';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,91 +10,72 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
+import ItemCard from '../ItemCard';
+import SideNavCom from '../SideNavCom/index.jsx';
+import { data } from 'autoprefixer';
 
 
-const SliderData = [
-    {id:1,
-    img:'./Img/Layer 5.png',
-    imgTextTopText1:'Collection 2022',
-    imgTextTopText2:'Save 50% for',
-    imgTextTopText3:'First Purchase',
-    buttonTitle:'Shop Now',
-    imgtextBottomTextHeader1:'Money Back',
-    imgtextBottomText1:'30 Days Money Back guarantee',
-    imgtextBottomTextHeader2:'Money Back',
-    imgtextBottomText2:'Free Shipping',
-    imgtextBottomTextHeader3:'Special Sale',
-    imgtextBottomText3:'Extra $5 off on all items',},
-       {id:2,
-    img:'./Img/Layer 5.png',
-    imgTextTopText1:'Collection 2022',
-    imgTextTopText2:'Save 50% for',
-    imgTextTopText3:'First Purchase',
-    buttonTitle:'Shop Now',
-    imgtextBottomTextHeader1:'Money Back',
-    imgtextBottomText1:'30 Days Money Back guarantee',
-    imgtextBottomTextHeader2:'Money Back',
-    imgtextBottomText2:'Free Shipping',
-    imgtextBottomTextHeader3:'Special Sale',
-    imgtextBottomText3:'Extra $5 off on all items',},
-      {id:3,
-    img:'./Img/Layer 5.png',
-    imgTextTopText1:'Collection 2022',
-    imgTextTopText2:'Save 50% for',
-    imgTextTopText3:'First Purchase',
-    buttonTitle:'Shop Now',
-    imgtextBottomTextHeader1:'Money Back',
-    imgtextBottomText1:'30 Days Money Back guarantee',
-    imgtextBottomTextHeader2:'Money Back',
-    imgtextBottomText2:'Free Shipping',
-    imgtextBottomTextHeader3:'Special Sale',
-    imgtextBottomText3:'Extra $5 off on all items',},
-       {id:4,
-    img:'./Img/Layer 5.png',
-    imgTextTopText1:'Collection 2022',
-    imgTextTopText2:'Save 50% for',
-    imgTextTopText3:'First Purchase',
-    buttonTitle:'Shop Now',
-    imgtextBottomTextHeader1:'Money Back',
-    imgtextBottomText1:'30 Days Money Back guarantee',
-    imgtextBottomTextHeader2:'Money Back',
-    imgtextBottomText2:'Free Shipping',
-    imgtextBottomTextHeader3:'Special Sale',
-    imgtextBottomText3:'Extra $5 off on all items',},
-]
+  const SliderData =[
+        {
+            id: 1,
+            img: './Img/Layer 5.png',
+            imgTextTopText1: 'Collection 2022',
+            imgTextTopText2: 'Save 50% for',
+            imgTextTopText3: 'First Purchase',
+            buttonTitle: 'Shop Now',
+            imgtextBottomTextHeader1: 'Money Back',
+            imgtextBottomText1: '30 Days Money Back guarantee',
+            imgtextBottomTextHeader2: 'Money Back',
+            imgtextBottomText2: 'Free Shipping',
+            imgtextBottomTextHeader3: 'Special Sale',
+            imgtextBottomText3: 'Extra $5 off on all items',
+        },
+        {
+            id: 2,
+            img: './Img/Layer 5.png',
+            imgTextTopText1: 'Collection 2022',
+            imgTextTopText2: 'Save 50% for',
+            imgTextTopText3: 'First Purchase',
+            buttonTitle: 'Shop Now',
+            imgtextBottomTextHeader1: 'Money Back',
+            imgtextBottomText1: '30 Days Money Back guarantee',
+            imgtextBottomTextHeader2: 'Money Back',
+            imgtextBottomText2: 'Free Shipping',
+            imgtextBottomTextHeader3: 'Special Sale',
+            imgtextBottomText3: 'Extra $5 off on all items',
+        },
+        {
+            id: 3,
+            img: './Img/Layer 5.png',
+            imgTextTopText1: 'Collection 2022',
+            imgTextTopText2: 'Save 50% for',
+            imgTextTopText3: 'First Purchase',
+            buttonTitle: 'Shop Now',
+            imgtextBottomTextHeader1: 'Money Back',
+            imgtextBottomText1: '30 Days Money Back guarantee',
+            imgtextBottomTextHeader2: 'Money Back',
+            imgtextBottomText2: 'Free Shipping',
+            imgtextBottomTextHeader3: 'Special Sale',
+            imgtextBottomText3: 'Extra $5 off on all items',
+        },
+        {
+            id: 4,
+            img: './Img/Layer 5.png',
+            imgTextTopText1: 'Collection 2022',
+            imgTextTopText2: 'Save 50% for',
+            imgTextTopText3: 'First Purchase',
+            buttonTitle: 'Shop Now',
+            imgtextBottomTextHeader1: 'Money Back',
+            imgtextBottomText1: '30 Days Money Back guarantee',
+            imgtextBottomTextHeader2: 'Money Back',
+            imgtextBottomText2: 'Free Shipping',
+            imgtextBottomTextHeader3: 'Special Sale',
+            imgtextBottomText3: 'Extra $5 off on all items',
+        },
+    ]
 
-const SideNavData = [
-    {id:1,
-    navLink:'/',
-    navLinkText:'Clothing',},
-     {id:2,
-    navLink:'/',
-    navLinkText:'Electronics',},
-     {id:3,
-    navLink:'/',
-    navLinkText:'Shoes',},
-     {id:4,
-    navLink:'/',
-    navLinkText:'Watches',},
-     {id:5,
-    navLink:'/',
-    navLinkText:'Jewellery',},
-     {id:6,
-    navLink:'/',
-    navLinkText:'Health and Beauty',},
-     {id:7,
-    navLink:'/',
-    navLinkText:'Kids and Babies',},
-     {id:8,
-    navLink:'/',
-    navLinkText:'Sports',},
-     {id:9,
-    navLink:'/',
-    navLinkText:'Home and Garden',},
-
-  
-]
 const Hero = () => {
+
   return (
     <>
     <header>
@@ -105,17 +86,14 @@ const Hero = () => {
             <div className="flex md:flex-row md:gap-4">
                 <div className="bg-white hidden md:block md:w-3/12 p-0 m-0">
                     <div className="flex flex-col items-left">
-                          {SideNavData.map(({id,navLinkText,navLink})=>(
-                                <li className="text-left  bg-white mb-1  flex items-center w-full" key={id}>
-                                        <a href={navLink} className="flex flex-row items-center px-2 py-1 text-brand-black hover:text-brand-red gap-x-4 shadow-md w-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 font-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        <span className='flex items-center text-md font-normal'>{navLinkText}</span>
-                                        </a>
-                                        </li>
-                    ))}
+                        
+                        {Data.SideNavData.map((item,index)=>{
+                            return(
+                                    <SideNavCom Link={item.Link} linkTitle={item.LinkText} key={index}/>
+                            )
+                        })}
+                    
+
                     </div>
                   
                 </div>
@@ -180,6 +158,15 @@ const Hero = () => {
                         </Swiper>
                 </div>
             </div>
+            {/* <div className="grid grid-cols-6 gap-2 my-2">
+                {Data.productData.map((item,index)=>{
+                    return(
+                    <ItemCard Img={item.img} ItemTitle={item.title} ItemDesc={item.description} ItemPrice={item.price} key={index}  />
+                    )
+
+                })}
+                
+            </div> */}
 
         </div>
 
