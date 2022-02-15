@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import Data from '../../Data/data.js';
+import DropDown from '../DropDown/index.jsx';
 import ItemCard from '../ItemCard';
 
 const ProductSection = (props) => {
@@ -36,6 +37,8 @@ const ProductSection = (props) => {
                     
 
             </div>
+
+   
             </section>
   )
 }
