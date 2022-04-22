@@ -10,9 +10,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
-import ItemCard from '../ItemCard';
 import SideNavCom from '../SideNavCom/index.jsx';
-import { data } from 'autoprefixer';
+
 
 
   const SliderData =[

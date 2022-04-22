@@ -1,11 +1,10 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { Routes, Route, Link } from "react-router-dom";
 import Hero from './components/Hero';
 import ProductSection from './components/ProductSection';
 import { CartProvider } from "react-use-cart";
 import Cart from './components/Cart';
-import DropDown from './components/DropDown';
+
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
 
       <CartProvider>
         <Navbar />
-
+        <Cart/>
         <Hero />
         <ProductSection />
 
